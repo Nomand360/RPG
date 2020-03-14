@@ -15,8 +15,8 @@
 class Game
 {
 private:
-    sf::RenderWindow *window;
-    sf::Event sfEvent;
+    sf::RenderWindow *window; //объект окна
+    sf::Event sfEvent; // объект событий
     void initWindow();
 public:
     Game();
