@@ -5,4 +5,8 @@ CONFIG -= qt
 LIBS += -lsfml-graphics -lsfml-window -lsfml-system -lsfm-audio -lsfml-network
 
 SOURCES += \
+        game.cpp \
         main.cpp
+
+HEADERS += \
+    game.h
