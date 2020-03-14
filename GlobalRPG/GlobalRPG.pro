@@ -12,7 +12,3 @@ SOURCES += \
 HEADERS += \
     game.h \
     states.h
-
-DISTFILES +=
-
-RESOURCES +=
