@@ -12,10 +12,8 @@ void Game::initWindow(){
         fst >> window_WD.width >> window_WD.height;
         fst >> frame_limit;
         fst >> vert_sync_enabled;
-    }else{
-        std::cout << "error\n";
     }
-
+    fst.close();
     this->window = new sf::RenderWindow(window_WD, title); //Инииализация динамического окна
     this->window->setFramerateLimit(frame_limit);
     this->window->setVerticalSyncEnabled(vert_sync_enabled);
