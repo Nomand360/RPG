@@ -15,10 +15,12 @@
 class Game
 {
 private:
-
+    sf::RenderWindow *window;
+    sf::Event sfEvent;
+    void initWindow();
 public:
     Game();
-
+    ~Game();
     //Функции игры
     void updateSFMLEvents();
     void update();
