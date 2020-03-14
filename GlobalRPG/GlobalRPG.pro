@@ -6,9 +6,11 @@ LIBS += -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
 
 SOURCES += \
         game.cpp \
+        gamestates.cpp \
         main.cpp \
         states.cpp
 
 HEADERS += \
     game.h \
+    gamestates.h \
     states.h
