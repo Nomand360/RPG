@@ -1,27 +1,21 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
-
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Network.hpp>
-
+#include <states.h>
 
 class Game
 {
 private:
     sf::RenderWindow *window; //объект окна
     sf::Event sfEvent; // объект событий
+    float deltaTime;
+    sf::Clock deltaTimeClock; //время для обновления
     void initWindow();
 public:
     Game();
-    ~Game();
+    virtual ~Game();
     //Функции игры
+    void updateDeltaTime();
     void updateSFMLEvents();
     void update();
     void render();
