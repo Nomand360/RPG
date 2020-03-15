@@ -6,6 +6,9 @@
 #include <cstdlib>
 #include <fstream>
 #include <sstream>
+#include <vector>
+#include <stack>
+#include <map>
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
@@ -16,13 +19,15 @@
 class States
 {
 private:
+    sf::RenderWindow *window;
     std::vector<sf::Texture> textures;
 public:
-    States();
+    States(sf::RenderWindow *window);
     virtual ~States();
 
-    virtual void render() = 0;
-    virtual void update() = 0;
+    virtual void endState() = 0;
+    virtual void render(sf::RenderTarget *target = nullptr) = 0;
+    virtual void update(const float &deltaTime) = 0;
 };
 
 #endif // STATES_H

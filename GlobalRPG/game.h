@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <states.h>
+#include <gamestates.h>
 
 class Game
 {
@@ -10,7 +10,11 @@ private:
     sf::Event sfEvent; // объект событий
     float deltaTime;
     sf::Clock deltaTimeClock; //время для обновления
+
+    std::stack<States*> states;
+
     void initWindow();
+    void initStates();
 public:
     Game();
     virtual ~Game();
